@@ -1,14 +1,12 @@
 'use strict';
 
-const images = document.querySelectorAll('img');
 const mainImg = document.querySelector('#largeImg');
+const list = document.querySelector('#thumbs');
 
-images.forEach((image) => {
-  image.addEventListener('click', (e) => {
-    e.preventDefault();
+list.addEventListener('click', (e) => {
+  e.preventDefault();
 
-    const img = e.currentTarget.getAttribute('src');
+  const img = e.target.getAttribute('src');
 
-    mainImg.src = img;
-  });
+  mainImg.src = img;
 });
